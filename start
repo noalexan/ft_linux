@@ -1,0 +1,13 @@
+qemu-system-x86_64                                                                                  \
+	-drive if=pflash,format=raw,file=/home/noah/Desktop/edk2/Build/OvmfX64/DEBUG_GCC5/QEMU/bios.bin \
+	-m 16G                                                                                          \
+	-smp 8                                                                                          \
+	-cpu core2duo                                                                                   \
+	-enable-kvm                                                                                     \
+	-daemonize                                                                                      \
+	-net user,hostfwd=tcp::22222-:22                                                                \
+	-net nic                                                                                        \
+	-hda /home/noah/Documents/ISOs/ft_linux-x86_64-systemd/ft_linux-x86_64.qcow2                    \
+	-vga virtio                                                                                     \
+	-full-screen                                                                                    \
+	-device qemu-xhci                                                                               \
